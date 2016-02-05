@@ -7,4 +7,5 @@ Online implementation of card game Ergo.
 
 # Технические средства
 Backend: Django, ngnix, sqlite3, memcached.
+
 Frontend: HTML5, CSS3, JS, jQuery, Angular2 (возможно), Twitter Bootstarp 3.
