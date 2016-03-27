@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% if user.is_authenticated %}
+        <strong>You are already registered!</strong>
+    {% else %}
+        {% if registered %}
+            <strong>Thank you for registering!</strong>
+        {% else %}
+            <h1>Registration</h1>
+
+            <form id="user_form" method="post" action="{% url 'register' %}"
+                    enctype="multipart/form-data">
+                {% csrf_token %}
+
+                {{ user_form.as_p }}
+
+                <input type="submit" name="submit" value="Register" />
+            </form>
+        {% endif %}
+    {% endif %}
+{% endblock %}
